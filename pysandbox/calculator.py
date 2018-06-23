@@ -6,3 +6,7 @@ class Calculator(object):
             return x + y
         else:
             raise ValueError
+
+    @staticmethod
+    def negate(x, y):
+        return x - y

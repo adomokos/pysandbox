@@ -18,3 +18,9 @@ class TestCalculator(unittest.TestCase):
 
     def test_calculator_returns_error_message_if_y_arg_not_number(self):
         self.assertRaises(ValueError, self.calc.add, 2, 'three')
+
+    def test_static_method_negate(self):
+        self.assertEqual(5, Calculator.negate(7, 2))
+
+    def test_static_method_can_be_invoked_on_instance(self):
+        self.assertEqual(5, self.calc.negate(7, 2))
